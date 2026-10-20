@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.nexteverything/parts",
+  "description": "Find electronic parts with live Mouser, DigiKey and JLCPCB stock and prices, check BOMs, order.",
+  "title": "Next Everything",
+  "version": "1.0.0",
+  "websiteUrl": "https://nexteverything.io/docs/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.nexteverything.io/mcp",
+      "headers": [
+        {
+          "description": "Bearer token with your API key: \"Bearer nx_live_...\". Get a key at https://nexteverything.io/signup/",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "Authorization"
+        }
+      ]
+    }
+  ]
+}
